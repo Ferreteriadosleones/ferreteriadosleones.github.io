@@ -9,7 +9,15 @@
         body { font-family: sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; overflow-x: hidden; }
         header { background-color: #000; color: #fff; padding: 12px; text-align: center; border-bottom: 3px solid #ffcc00; }
         
-        .hero { background-color: #444; color: white; padding: 30px 20px; text-align: center; }
+        /* SECCIÓN HERO CON IMAGEN DE FONDO */
+        .hero { 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://i.ibb.co/ccqWWPpc/1778675940224.png');
+            background-size: cover;
+            background-position: center;
+            color: white; 
+            padding: 40px 20px; 
+            text-align: center; 
+        }
         .btn-whatsapp-hero { background-color: #ffcc00; color: #000; padding: 10px 25px; text-decoration: none; font-weight: bold; border-radius: 8px; display: inline-block; margin-top: 12px; text-transform: uppercase; font-size: 0.9rem; }
 
         .marcas-container { background-color: #fff; padding: 15px 10px; text-align: center; border-bottom: 1px solid #ddd; }
@@ -18,7 +26,6 @@
 
         .section-title { padding: 20px 20px 5px; font-size: 1.1rem; font-weight: bold; color: #222; display: flex; align-items: center; gap: 8px; }
         
-        /* CARRUSEL REORDENADO */
         .carrusel-contenedor { display: flex; overflow-x: auto; gap: 12px; padding: 10px 20px 20px; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; }
         .carrusel-contenedor::-webkit-scrollbar { display: none; } 
         
@@ -48,8 +55,8 @@
 
     <section class="hero">
         <h1 style="margin:0; font-size: 1.5rem; letter-spacing: 1px;">FERRETERÍA DOS LEONES</h1>
-        <p style="margin: 8px 0; font-size: 0.85rem; opacity: 0.9;">Tu ferretería de confianza en Gral. Rodríguez</p>
-        <a href="https://wa.me/541131529826?text=Hola!%20Quisiera%20hacer%20una%20consulta%20general." class="btn-whatsapp-hero">PEDIR POR WHATSAPP</a>
+        <p style="margin: 8px 0; font-size: 0.85rem; opacity: 0.9;">Batallón San Pedro 275</p>
+        <a href="https://wa.me/541131529826?text=Hola!%20Quisiera%20hacer%20una%20consulta%20general." class="btn-whatsapp-hero">WHATSAPP</a>
     </section>
 
     <section class="marcas-container">
@@ -65,17 +72,15 @@
     </section>
 
     <div class="section-title">
-        <i class="fas fa-shopping-basket"></i> Nuestros Productos
+        <i class="fas fa-shopping-basket"></i> Galería de Productos
     </div>
 
-    <!-- PRODUCTOS CON TEXTO AUTOMÁTICO PARA WHATSAPP -->
     <section class="carrusel-contenedor">
-        <div class="card"><img src="https://i.ibb.co/6RjCf4jz/IMG-20260513-WA0026.jpg"><div class="card-info"><a href="https://wa.me/541131529826?text=Hola!%20Me%20interesa%20el%20producto%20W-M%20Ferretería%20Dos%20Leones" class="btn-consultar">CONSULTAR</a></div></div>
-        <div class="card"><img src="https://i.ibb.co/M5ZgxYxz/IMG-20260513-WA0027.jpg"><div class="card-info"><a href="https://wa.me/541131529826?text=Hola!%20Quiero%20consultar%20por%20la%20llave%20térmica%20Motta" class="btn-consultar">CONSULTAR</a></div></div>
-        <div class="card"><img src="https://i.ibb.co/LdqGvxT6/IMG-20260513-WA0028.jpg"><div class="card-info"><a href="https://wa.me/541131529826?text=Hola!%20Me%20interesa%20el%20nivel%20de%20mano%20Sola" class="btn-consultar">CONSULTAR</a></div></div>
-        <div class="card"><img src="https://i.ibb.co/RTsPmZT7/IMG-20260513-WA0029.jpg"><div class="card-info"><a href="https://wa.me/541131529826?text=Hola!%20Quiero%20info%20del%20disyuntor%20Lüsqtoff" class="btn-consultar">CONSULTAR</a></div></div>
-        <div class="card"><img src="https://i.ibb.co/Z1cMHd4X/IMG-20260513-WA0030.jpg"><div class="card-info"><a href="https://wa.me/541131529826?text=Hola!%20Me%20interesa%20el%20automático%20de%20tanque" class="btn-consultar">CONSULTAR</a></div></div>
-        <!-- Más productos siguiendo el mismo formato de texto -->
+        <div class="card"><img src="https://i.ibb.co/6RjCf4jz/IMG-20260513-WA0026.jpg"><div class="card-info"><a href="https://wa.me/541131529826?text=Hola!%20Me%20interesa%20el%20producto%20Ceresita%20Weber." class="btn-consultar">CONSULTAR</a></div></div>
+        <div class="card"><img src="https://i.ibb.co/LdqGvxT6/IMG-20260513-WA0028.jpg"><div class="card-info"><a href="https://wa.me/541131529826?text=Hola!%20Me%20interesa%20el%20nivel%20de%20mano%20Sola." class="btn-consultar">CONSULTAR</a></div></div>
+        <div class="card"><img src="https://i.ibb.co/Z1cMHd4X/IMG-20260513-WA0030.jpg"><div class="card-info"><a href="https://wa.me/541131529826?text=Hola!%20Me%20interesa%20el%20automático%20de%20tanque%20Viyilant." class="btn-consultar">CONSULTAR</a></div></div>
+        <div class="card"><img src="https://i.ibb.co/M5ZgxYxz/IMG-20260513-WA0027.jpg"><div class="card-info"><a href="https://wa.me/541131529826?text=Hola!%20Quiero%20consultar%20por%20la%20llave%20térmica%20Motta." class="btn-consultar">CONSULTAR</a></div></div>
+        <div class="card"><img src="https://i.ibb.co/RTsPmZT7/IMG-20260513-WA0029.jpg"><div class="card-info"><a href="https://wa.me/541131529826?text=Hola!%20Quiero%20info%20del%20disyuntor%20Lüsqtoff." class="btn-consultar">CONSULTAR</a></div></div>
     </section>
 
     <div class="section-title">

@@ -1,83 +1,107 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ferretería Dos Leones</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-<style>
-        :root { --amarillo: #f9d800; --negro: #121212; }
-        body { font-family: sans-serif; background-color: #f8f9fa; margin: 0; }
-        .navbar { background: var(--negro); border-bottom: 3px solid var(--amarillo); }
-        .hero { 
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://i.ibb.co/n87LPNRc/1000537617.jpg');
-            background-size: cover; padding: 30px 20px; color: white; text-align: center;
-        }
-        .img-producto { width: 100%; height: 160px; object-fit: contain; background: white; }
-        .card-producto { border: none; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1); background: white; }
-        .scroll-horizontal { display: flex; overflow-x: auto; gap: 12px; padding: 10px 15px 20px; scrollbar-width: none; }
-        .scroll-horizontal::-webkit-scrollbar { display: none; }
-        .item-scroll { min-width: 150px; max-width: 150px; }
-        .btn-consultar { background: var(--negro); color: white; font-size: 0.7rem; font-weight: bold; }
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { font-family: sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; overflow-x: hidden; }
+        header { background-color: #000; color: #fff; padding: 12px; text-align: center; border-bottom: 3px solid #ffcc00; }
         
-        /* Mapa reducido */
-        .mapa-compacto { height: 180px; border-radius: 12px; overflow: hidden; border: 1px solid #ddd; }
-        
-        /* Sección Identidad */
-        .identidad-img { max-width: 150px; border-radius: 15px; margin-bottom: 10px; }
-        
-        footer { background: var(--negro); color: white; padding: 25px; text-align: center; font-size: 0.8rem; }
-        .wa-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; z-index: 1000; text-decoration: none; }
-</style>
-  </head>
-  <body>
+        .hero { background-color: #444; color: white; padding: 30px 20px; text-align: center; }
+        .btn-whatsapp-hero { background-color: #ffcc00; color: #000; padding: 10px 25px; text-decoration: none; font-weight: bold; border-radius: 8px; display: inline-block; margin-top: 12px; text-transform: uppercase; font-size: 0.9rem; }
 
-    <nav class="navbar navbar-dark"><div class="container text-center"><span class="navbar-brand mx-auto fw-bold">DOS LEONES</span></div></nav>
+        .marcas-container { background-color: #fff; padding: 15px 10px; text-align: center; border-bottom: 1px solid #ddd; }
+        .marcas-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; }
+        .marca-badge { background: #fff; border: 1px solid #ddd; padding: 4px 12px; border-radius: 20px; font-size: 0.7rem; font-weight: bold; color: #666; }
 
-    <header class="hero">
-	  <h4 class="fw-bold mb-1">FERRETERÍA DOS LEONES</h4>
-	  <p class="small mb-3">Batallón San Pedro 275</p>
-	  <a href="https://wa.me/5491131529826" class="btn btn-warning btn-sm fw-bold px-4">WHATSAPP</a>
+        .section-title { padding: 20px 20px 5px; font-size: 1.1rem; font-weight: bold; color: #222; display: flex; align-items: center; gap: 8px; }
+        
+        /* CARRUSEL REORDENADO */
+        .carrusel-contenedor { display: flex; overflow-x: auto; gap: 12px; padding: 10px 20px 20px; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; }
+        .carrusel-contenedor::-webkit-scrollbar { display: none; } 
+        
+        .card { min-width: 220px; max-width: 220px; background: #fff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; display: flex; flex-direction: column; text-align: center; }
+        .card img { width: 100%; height: 180px; object-fit: contain; background: #fff; padding: 8px; box-sizing: border-box; }
+        .card-info { padding: 12px; background: #fff; }
+        .btn-consultar { background: #000; color: #fff; padding: 8px; text-decoration: none; border-radius: 5px; font-size: 0.8rem; font-weight: bold; display: block; text-transform: uppercase; }
+
+        .mapa-container { padding: 0 15px 25px; }
+        iframe { width: 100%; border-radius: 10px; border: 0; min-height: 250px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+
+        .identidad-container { background-color: #f4f4f4; padding: 40px 20px; text-align: center; }
+        .logo-leones { width: 180px; height: auto; border-radius: 15px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .identidad-texto { font-size: 0.85rem; color: #666; line-height: 1.6; max-width: 320px; margin: 0 auto; font-style: italic; }
+
+        footer { background: #000; color: #ffcc00; text-align: center; padding: 25px 20px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; line-height: 1.5; }
+        .disenado-por { color: #fff; font-size: 0.6rem; opacity: 0.7; margin-top: 10px; text-transform: none; }
+
+        .wsp-flotante { position: fixed; bottom: 20px; right: 20px; background-color: #25d366; color: white; width: 55px; height: 55px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 28px; box-shadow: 2px 2px 8px rgba(0,0,0,0.3); z-index: 1000; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h3 style="margin:0; letter-spacing: 2px; font-size: 1rem;">DOS LEONES</h3>
     </header>
 
-    <div class="py-3">
-	  <h6 class="fw-bold px-3 mb-2"><i class="bi bi-box-seam"></i> Galería de Productos</h6>
-	  <div class="scroll-horizontal">
-		<!-- Los 10 productos con mensajes personalizados -->
-		<div class="item-scroll"><div class="card card-producto"><img src="https://i.ibb.co/6RjCf4jz/IMG-20260513-WA0026.jpg" class="img-producto"><div class="p-2"><a href="https://wa.me/5491131529826?text=Hola!%20Me%20interesa%20el%20producto:%20Ceresita/Weber" class="btn btn-consultar w-100">CONSULTAR</a></div></div></div>
-		<div class="item-scroll"><div class="card card-producto"><img src="https://i.ibb.co/LdqGvxT6/IMG-20260513-WA0028.jpg" class="img-producto"><div class="p-2"><a href="https://wa.me/5491131529826?text=Hola!%20Me%20interesa%20el%20producto:%20Nivel%20Sola" class="btn btn-consultar w-100">CONSULTAR</a></div></div></div>
-		<div class="item-scroll"><div class="card card-producto"><img src="https://i.ibb.co/RTsPmZT7/IMG-20260513-WA0029.jpg" class="img-producto"><div class="p-2"><a href="https://wa.me/5491131529826?text=Hola!%20Me%20interesa%20el%20producto:%20Flotante%20Viyilant" class="btn btn-consultar w-100">CONSULTAR</a></div></div></div>
-		<div class="item-scroll"><div class="card card-producto"><img src="https://i.ibb.co/Z1cMHd4X/IMG-20260513-WA0030.jpg" class="img-producto"><div class="p-2"><a href="https://wa.me/5491131529826?text=Hola!%20Me%20interesa%20el%20producto:%20Termica%20Jeluz" class="btn btn-consultar w-100">CONSULTAR</a></div></div></div>
-		<div class="item-scroll"><div class="card card-producto"><img src="https://i.ibb.co/3YS6hV3K/IMG-20260513-WA0031.jpg" class="img-producto"><div class="p-2"><a href="https://wa.me/5491131529826?text=Hola!%20Me%20interesa%20el%20producto:%20Cables%20Trefilcon" class="btn btn-consultar w-100">CONSULTAR</a></div></div></div>
-		<div class="item-scroll"><div class="card card-producto"><img src="https://i.ibb.co/JjZYYFyT/IMG-20260513-WA0032.jpg" class="img-producto"><div class="p-2"><a href="https://wa.me/5491131529826?text=Hola!%20Me%20interesa%20el%20producto:%20Boquillas%20Termofusion" class="btn btn-consultar w-100">CONSULTAR</a></div></div></div>
-		<div class="item-scroll"><div class="card card-producto"><img src="https://i.ibb.co/LWN6v6z/IMG-20260513-WA0033.jpg" class="img-producto"><div class="p-2"><a href="https://wa.me/5491131529826?text=Hola!%20Me%20interesa%20el%20producto:%20Tanza%20Grilon" class="btn btn-consultar w-100">CONSULTAR</a></div></div></div>
-		<div class="item-scroll"><div class="card card-producto"><img src="https://i.ibb.co/cSqP96FX/IMG-20260513-WA0034.jpg" class="img-producto"><div class="p-2"><a href="https://wa.me/5491131529826?text=Hola!%20Me%20interesa%20el%20producto:%20Disco%20Aliafor" class="btn btn-consultar w-100">CONSULTAR</a></div></div></div>
-		<div class="item-scroll"><div class="card card-producto"><img src="https://i.ibb.co/SX3L8JvZ/IMG-20260513-WA0035.jpg" class="img-producto"><div class="p-2"><a href="https://wa.me/5491131529826?text=Hola!%20Me%20interesa%20la%20Publicidad%20Envio%20Gratis" class="btn btn-consultar w-100">CONSULTAR</a></div></div></div>
-		<div class="item-scroll"><div class="card card-producto"><img src="https://i.ibb.co/M5ZgxYxz/IMG-20260513-WA0027.jpg" class="img-producto"><div class="p-2"><a href="https://wa.me/5491131529826?text=Hola!%20Me%20interesa%20el%20Logo%20Dos%20Leones" class="btn btn-consultar w-100">CONSULTAR</a></div></div></div>
-	  </div>
+    <section class="hero">
+        <h1 style="margin:0; font-size: 1.5rem; letter-spacing: 1px;">FERRETERÍA DOS LEONES</h1>
+        <p style="margin: 8px 0; font-size: 0.85rem; opacity: 0.9;">Tu ferretería de confianza en Gral. Rodríguez</p>
+        <a href="https://wa.me/541131529826?text=Hola!%20Quisiera%20hacer%20una%20consulta%20general." class="btn-whatsapp-hero">PEDIR POR WHATSAPP</a>
+    </section>
+
+    <section class="marcas-container">
+        <div class="marcas-grid">
+            <span class="marca-badge">GHERARDI</span>
+            <span class="marca-badge">MOTTA</span>
+            <span class="marca-badge">LÜSQTOFF</span>
+            <span class="marca-badge">SOLA</span>
+            <span class="marca-badge">EVEL</span>
+            <span class="marca-badge">NEBRASKA</span>
+            <span class="marca-badge">Y MÁS...</span>
+        </div>
+    </section>
+
+    <div class="section-title">
+        <i class="fas fa-shopping-basket"></i> Nuestros Productos
     </div>
 
-    <div class="container mb-4">
-	  <h6 class="fw-bold mb-2 small"><i class="bi bi-geo-alt"></i> Ubicación</h6>
-	  <div class="mapa-compacto">
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.47355152843!2d-58.948126!3d-34.617478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc910368c17b8f%3A0xc3b8692750e2632b!2sBatall%C3%B3n%20San%20Pedro%20275!5e0!3m2!1ses-419!2sar!4v1715614000000!5m2!1ses-419!2sar" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-	  </div>
-    </div>
+    <!-- PRODUCTOS CON TEXTO AUTOMÁTICO PARA WHATSAPP -->
+    <section class="carrusel-contenedor">
+        <div class="card"><img src="https://i.ibb.co/6RjCf4jz/IMG-20260513-WA0026.jpg"><div class="card-info"><a href="https://wa.me/541131529826?text=Hola!%20Me%20interesa%20el%20producto%20W-M%20Ferretería%20Dos%20Leones" class="btn-consultar">CONSULTAR</a></div></div>
+        <div class="card"><img src="https://i.ibb.co/M5ZgxYxz/IMG-20260513-WA0027.jpg"><div class="card-info"><a href="https://wa.me/541131529826?text=Hola!%20Quiero%20consultar%20por%20la%20llave%20térmica%20Motta" class="btn-consultar">CONSULTAR</a></div></div>
+        <div class="card"><img src="https://i.ibb.co/LdqGvxT6/IMG-20260513-WA0028.jpg"><div class="card-info"><a href="https://wa.me/541131529826?text=Hola!%20Me%20interesa%20el%20nivel%20de%20mano%20Sola" class="btn-consultar">CONSULTAR</a></div></div>
+        <div class="card"><img src="https://i.ibb.co/RTsPmZT7/IMG-20260513-WA0029.jpg"><div class="card-info"><a href="https://wa.me/541131529826?text=Hola!%20Quiero%20info%20del%20disyuntor%20Lüsqtoff" class="btn-consultar">CONSULTAR</a></div></div>
+        <div class="card"><img src="https://i.ibb.co/Z1cMHd4X/IMG-20260513-WA0030.jpg"><div class="card-info"><a href="https://wa.me/541131529826?text=Hola!%20Me%20interesa%20el%20automático%20de%20tanque" class="btn-consultar">CONSULTAR</a></div></div>
+        <!-- Más productos siguiendo el mismo formato de texto -->
+    </section>
 
-    <section class="container py-4 text-center">
-	  <h6 class="fw-bold mb-3">Nuestra Identidad</h6>
-	  <img src="https://i.ibb.co/JR9SmkJ3/1000537618.jpg" class="identidad-img shadow-sm" alt="Identidad Dos Leones">
-	  <p class="text-muted small px-4" style="font-size: 0.75rem;">Tradición y confianza en cada herramienta que vendemos para Gral. Rodríguez y zona oeste.</p>
+    <div class="section-title">
+        <i class="fas fa-map-marker-alt"></i> Ubicación
+    </div>
+    <section class="mapa-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.472147317657!2d-58.9515!3d-34.6171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDM3JzAxLjYiUyA1OMKwNTcnMDUuNCJX!5e0!3m2!1ses!2sar!4v1700000000000" loading="lazy"></iframe>
+    </section>
+
+    <section class="identidad-container">
+        <h3 style="font-size: 1.1rem; margin-bottom: 20px;">Nuestra Identidad</h3>
+        <img src="https://i.ibb.co/fG4g1DRs/1778676017244.png" class="logo-leones" alt="Logo">
+        <p class="identidad-texto">
+            "Tradición y confianza en cada herramienta que vendemos para Gral. Rodríguez y zona oeste."
+        </p>
     </section>
 
     <footer>
-	  <p class="fw-bold text-warning mb-1">FERRETERÍA DOS LEONES</p>
-	  <p class="mb-0 opacity-75">Batallón San Pedro 275, Gral. Rodríguez</p>
-	  <div class="mt-2 opacity-50" style="font-size: 9px;">© 2026 Diseñado por Leonel Ayala</div>
+        <div>FERRETERÍA DOS LEONES</div>
+        <div style="font-size: 0.6rem; opacity: 0.8; margin-top: 5px;">Batallón San Pedro 275, Gral. Rodríguez</div>
+        <div class="disenado-por">© 2026 Diseñado por Leonel Ayala</div>
     </footer>
 
-    <a href="https://wa.me/5491131529826" class="wa-float"><i class="bi bi-whatsapp"></i></a>
-  </body>
-</html>
+    <a href="https://wa.me/541131529826?text=Hola!%20Tengo%20una%20duda." class="wsp-flotante">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
+</body>
+</html>

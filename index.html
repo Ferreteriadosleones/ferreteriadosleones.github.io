@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ferretería Dos Leones</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
+<style>
         body { font-family: sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; overflow-x: hidden; }
         header { background-color: #000; color: #fff; padding: 12px; text-align: center; border-bottom: 3px solid #ffcc00; font-size: 0.8rem; letter-spacing: 2px; }
         
@@ -20,7 +20,7 @@
             display: inline-block; margin-top: 15px; text-transform: uppercase; font-size: 0.9rem;
         }
 
-        /* Carrusel de Marcas */
+        /* Carrusel de Marcas Corregido */
         .slider-marcas { background: white; padding: 15px 0; overflow: hidden; position: relative; border-bottom: 1px solid #ddd; }
         .slider-track { display: flex; width: calc(150px * 12); animation: scroll 25s linear infinite; }
         .slide { width: 150px; padding: 0 20px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
@@ -48,111 +48,119 @@
         .identidad img { width: 180px; border-radius: 15px; margin-bottom: 15px; }
         .frase { font-style: italic; font-size: 0.85rem; color: #666; max-width: 300px; margin: 0 auto; line-height: 1.4; }
 
+        /* Estilo para el contador de visitas */
+        .contador-contenedor { background: #f0f0f0; text-align: center; padding: 15px; border-top: 1px solid #ddd; }
+        .contador-texto { font-size: 0.75rem; color: #555; margin-bottom: 5px; font-weight: bold; }
+
         footer { background: #000; color: #ffcc00; text-align: center; padding: 25px; font-size: 0.7rem; line-height: 1.6; }
         .wsp-flotante { position: fixed; bottom: 20px; right: 20px; background-color: #25d366; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 25px; z-index: 1000; text-decoration: none; }
-    </style>
-</head>
-<body>
+</style>
+  </head>
+  <body>
 
     <header>DOS LEONES</header>
 
     <section class="hero">
-        <h1 style="margin:0; font-size: 1.2rem; text-transform: uppercase;">Ferretería Dos Leones</h1>
-        <p style="margin: 5px 0; font-size: 0.75rem; opacity: 0.9;">Batallón San Pedro 275</p>
-        <a href="https://wa.me/541131529826" class="btn-wsp-amarillo">WHATSAPP</a>
+	  <h1 style="margin:0; font-size: 1.2rem; text-transform: uppercase;">Ferretería Dos Leones</h1>
+	  <p style="margin: 5px 0; font-size: 0.75rem; opacity: 0.9;">Batallón San Pedro 275</p>
+	  <a href="https://wa.me/541131529826" class="btn-wsp-amarillo">WHATSAPP</a>
     </section>
 
     <div class="slider-marcas">
-        <div class="slider-track">
-            <div class="slide"><img src="https://i.ibb.co/wGfs8fP/IMG-20260513-WA0041.jpg"></div>
-            <div class="slide"><img src="https://i.ibb.co/xrLpw7L/IMG-20260513-WA0042.jpg"></div>
-            <div class="slide"><img src="https://i.ibb.co/rG3V8sHW/IMG-20260513-WA0043.jpg"></div>
-            <div class="slide"><img src="https://i.ibb.co/2Ym39nmD/IMG-20260513-WA0044.jpg"></div>
-            <div class="slide"><img src="https://i.ibb.co/gFtqdWpc/IMG-20260513-WA0045.jpg"></div>
-            <div class="slide"><img src="https://i.ibb.co/7dr4jN5n/IMG-20260513-WA0046.jpg"></div>
-            <div class="slide"><img src="https://i.ibb.co/wGfs8fP/IMG-20260513-WA0041.jpg"></div>
-            <div class="slide"><img src="https://i.ibb.co/xrLpw7L/IMG-20260513-WA0042.jpg"></div>
-            <div class="slide"><img src="https://i.ibb.co/rG3V8sHW/IMG-20260513-WA0043.jpg"></div>
-            <div class="slide"><img src="https://i.ibb.co/2Ym39nmD/IMG-20260513-WA0044.jpg"></div>
-            <div class="slide"><img src="https://i.ibb.co/gFtqdWpc/IMG-20260513-WA0045.jpg"></div>
-            <div class="slide"><img src="https://i.ibb.co/7dr4jN5n/IMG-20260513-WA0046.jpg"></div>
-        </div>
+	  <div class="slider-track">
+		<div class="slide"><img src="https://i.ibb.co/wGfs8fP/IMG-20260513-WA0041.jpg"></div>
+		<div class="slide"><img src="https://i.ibb.co/xrLpw7L/IMG-20260513-WA0042.jpg"></div>
+		<div class="slide"><img src="https://i.ibb.co/rG3V8sHW/IMG-20260513-WA0043.jpg"></div>
+		<div class="slide"><img src="https://i.ibb.co/2Ym39nmD/IMG-20260513-WA0044.jpg"></div>
+		<div class="slide"><img src="https://i.ibb.co/gFtqdWpc/IMG-20260513-WA0045.jpg"></div>
+		<div class="slide"><img src="https://i.ibb.co/7dr4jN5n/IMG-20260513-WA0046.jpg"></div>
+		<div class="slide"><img src="https://i.ibb.co/wGfs8fP/IMG-20260513-WA0041.jpg"></div>
+		<div class="slide"><img src="https://i.ibb.co/xrLpw7L/IMG-20260513-WA0042.jpg"></div>
+		<div class="slide"><img src="https://i.ibb.co/rG3V8sHW/IMG-20260513-WA0043.jpg"></div>
+		<div class="slide"><img src="https://i.ibb.co/2Ym39nmD/IMG-20260513-WA0044.jpg"></div>
+		<div class="slide"><img src="https://i.ibb.co/gFtqdWpc/IMG-20260513-WA0045.jpg"></div>
+		<div class="slide"><img src="https://i.ibb.co/7dr4jN5n/IMG-20260513-WA0046.jpg"></div>
+	  </div>
     </div>
 
     <div class="section-title"><i class="fas fa-shopping-bag"></i> Galería de Productos</div>
     <section class="carrusel-contenedor">
-        <div class="card">
-            <img src="https://i.ibb.co/6RjCf4jz/IMG-20260513-WA0026.jpg">
-            <div class="nombre-p">Ceresita</div>
-            <a href="https://wa.me/541131529826?text=Hola!%20Quiero%20información%20sobre%20Ceresita" class="btn-consultar">CONSULTAR</a>
-        </div>
-        <div class="card">
-            <img src="https://i.ibb.co/LdqGvxT6/IMG-20260513-WA0028.jpg">
-            <div class="nombre-p">Nivel de mano</div>
-            <a href="https://wa.me/541131529826?text=Hola!%20Quiero%20información%20sobre%20Nivel%20de%20mano" class="btn-consultar">CONSULTAR</a>
-        </div>
-        <div class="card">
-            <img src="https://i.ibb.co/RTsPmZT7/IMG-20260513-WA0029.jpg">
-            <div class="nombre-p">Automático para tanque</div>
-            <a href="https://wa.me/541131529826?text=Hola!%20Quiero%20información%20sobre%20Automático%20para%20tanque" class="btn-consultar">CONSULTAR</a>
-        </div>
-        <div class="card">
-            <img src="https://i.ibb.co/Z1cMHd4X/IMG-20260513-WA0030.jpg">
-            <div class="nombre-p">Térmica</div>
-            <a href="https://wa.me/541131529826?text=Hola!%20Quiero%20información%20sobre%20Térmica" class="btn-consultar">CONSULTAR</a>
-        </div>
-        <div class="card">
-            <img src="https://i.ibb.co/3YS6hV3K/IMG-20260513-WA0031.jpg">
-            <div class="nombre-p">Disyuntor</div>
-            <a href="https://wa.me/541131529826?text=Hola!%20Quiero%20información%20sobre%20Disyuntor" class="btn-consultar">CONSULTAR</a>
-        </div>
-        <div class="card">
-            <img src="https://i.ibb.co/JjZYYFyT/IMG-20260513-WA0032.jpg">
-            <div class="nombre-p">Boquillas para termofusora</div>
-            <a href="https://wa.me/541131529826?text=Hola!%20Quiero%20información%20sobre%20Boquillas%20para%20termofusora" class="btn-consultar">CONSULTAR</a>
-        </div>
-        <div class="card">
-            <img src="https://i.ibb.co/LWN6v6z/IMG-20260513-WA0033.jpg">
-            <div class="nombre-p">Rollos de cable</div>
-            <a href="https://wa.me/541131529826?text=Hola!%20Quiero%20información%20sobre%20Rollos%20de%20cable" class="btn-consultar">CONSULTAR</a>
-        </div>
-        <div class="card">
-            <img src="https://i.ibb.co/cSqP96FX/IMG-20260513-WA0034.jpg">
-            <div class="nombre-p">Tanza desmalezadora</div>
-            <a href="https://wa.me/541131529826?text=Hola!%20Quiero%20información%20sobre%20Tanza%20desmalezadora" class="btn-consultar">CONSULTAR</a>
-        </div>
-        <div class="card">
-            <img src="https://i.ibb.co/SX3L8JvZ/IMG-20260513-WA0035.jpg">
-            <div class="nombre-p">Disco diamantado Amoladora</div>
-            <a href="https://wa.me/541131529826?text=Hola!%20Quiero%20información%20sobre%20Disco%20diamantado%20Amoladora" class="btn-consultar">CONSULTAR</a>
-        </div>
-        <div class="card">
-            <img src="https://i.ibb.co/M5ZgxYxz/IMG-20260513-WA0027.jpg">
-            <div class="nombre-p">Propaganda</div>
-            <a href="https://wa.me/541131529826?text=Hola!%20Quiero%20más%20información%20sobre%20la%20Propaganda" class="btn-consultar">CONSULTAR</a>
-        </div>
+	  <div class="card">
+		<img src="https://i.ibb.co/M5ZgxYxz/IMG-20260513-WA0027.jpg">
+		<div class="nombre-p">Envio Gratis</div>
+		<a href="https://wa.me/541131529826?text=Hola!%20Quiero%20más%20información%20sobre%20Envio%20Gratis" class="btn-consultar">CONSULTAR</a>
+	  </div>
+	  <div class="card">
+		<img src="https://i.ibb.co/LdqGvxT6/IMG-20260513-WA0028.jpg">
+		<div class="nombre-p">Nivel de mano</div>
+		<a href="https://wa.me/541131529826?text=Hola!%20Quiero%20información%20sobre%20Nivel%20de%20mano" class="btn-consultar">CONSULTAR</a>
+	  </div>
+	  <div class="card">
+		<img src="https://i.ibb.co/RTsPmZT7/IMG-20260513-WA0029.jpg">
+		<div class="nombre-p">Automático para tanque</div>
+		<a href="https://wa.me/541131529826?text=Hola!%20Quiero%20información%20sobre%20Automático%20para%20tanque" class="btn-consultar">CONSULTAR</a>
+	  </div>
+	  <div class="card">
+		<img src="https://i.ibb.co/bMzRY3Dm/IMG-20260513-WA0030.jpg">
+		<div class="nombre-p">Térmica</div>
+		<a href="https://wa.me/541131529826?text=Hola!%20Quiero%20información%20sobre%20Térmica" class="btn-consultar">CONSULTAR</a>
+	  </div>
+	  <div class="card">
+		<img src="https://i.ibb.co/Cpkh2zFf/IMG-20260513-WA0031.jpg">
+		<div class="nombre-p">Disyuntor</div>
+		<a href="https://wa.me/541131529826?text=Hola!%20Quiero%20información%20sobre%20Disyuntor" class="btn-consultar">CONSULTAR</a>
+	  </div>
+	  <div class="card">
+		<img src="https://i.ibb.co/JjZYYFyT/IMG-20260513-WA0032.jpg">
+		<div class="nombre-p">Boquillas para termofusora</div>
+		<a href="https://wa.me/541131529826?text=Hola!%20Quiero%20información%20sobre%20Boquillas%20para%20termofusora" class="btn-consultar">CONSULTAR</a>
+	  </div>
+	  <div class="card">
+		<img src="https://i.ibb.co/LWN6v6z/IMG-20260513-WA0033.jpg">
+		<div class="nombre-p">Rollos de cable</div>
+		<a href="https://wa.me/541131529826?text=Hola!%20Quiero%20información%20sobre%20Rollos%20de%20cable" class="btn-consultar">CONSULTAR</a>
+	  </div>
+	  <div class="card">
+		<img src="https://i.ibb.co/cSqP96FX/IMG-20260513-WA0034.jpg">
+		<div class="nombre-p">Tanza desmalezadora</div>
+		<a href="https://wa.me/541131529826?text=Hola!%20Quiero%20información%20sobre%20Tanza%20desmalezadora" class="btn-consultar">CONSULTAR</a>
+	  </div>
+	  <div class="card">
+		<img src="https://i.ibb.co/SX3L8JvZ/IMG-20260513-WA0035.jpg">
+		<div class="nombre-p">Disco diamantado Amoladora</div>
+		<a href="https://wa.me/541131529826?text=Hola!%20Quiero%20información%20sobre%20Disco%20diamantado%20Amoladora" class="btn-consultar">CONSULTAR</a>
+	  </div>
+	  <div class="card">
+		<img src="https://i.ibb.co/6RjCf4jz/IMG-20260513-WA0026.jpg">
+		<div class="nombre-p">Ceresita</div>
+		<a href="https://wa.me/541131529826?text=Hola!%20Quiero%20información%20sobre%20Ceresita" class="btn-consultar">CONSULTAR</a>
+	  </div>
     </section>
 
     <div class="section-title"><i class="fas fa-map-marker-alt"></i> Ubicación (Toca para ir)</div>
     <div class="mapa-contenedor">
-        <!-- Este enlace cubre todo el mapa -->
-        <a href="https://www.google.com/maps/search/?api=1&query=Batallón+San+Pedro+275+General+Rodríguez" target="_blank" class="mapa-link"></a>
-        <iframe class="mapa-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.475471413809!2d-59.0028458!3d-34.617417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc910000000001%3A0x0!2zQmF0YWxsw7NuIFNhbiBQZWRybyAyNzUsIEczNDggR2VuZXJhbCBSb2Ryw61ndWV6LCBCdWVub3MgQWlyZXM!5e0!3m2!1ses!2sar!4v1715631234567" allowfullscreen="" loading="lazy"></iframe>
+	  <a href="https://www.google.com/maps/search/?api=1&query=Batallón+San+Pedro+275+Gral+Rodriguez" target="_blank" class="mapa-link"></a>
+	  <iframe class="mapa-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.475451950004!2d-58.948281!3d-34.613327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDM2JzQ4LjAiUyA1OMKwNTYnNTMuOCJX!5e0!3m2!1ses!2sar!4v1715610000000!5m2!1ses!2sar" allowfullscreen="" loading="lazy"></iframe>
     </div>
 
     <section class="identidad">
-        <h3>Nuestra Identidad</h3>
-        <img src="https://i.ibb.co/fG4g1DRs/1778676017244.png" alt="Dos Leones">
-        <p class="frase">"Tradición y confianza en cada herramienta que vendemos para Gral. Rodríguez y zona oeste."</p>
+	  <h3>Nuestra Identidad</h3>
+	  <img src="https://i.ibb.co/fG4g1DRs/1778676017244.png" alt="Dos Leones">
+	  <p class="frase">"Tradición y confianza en cada herramienta que vendemos para Gral. Rodríguez y zona oeste."</p>
     </section>
 
+    <div class="contador-contenedor">
+	  <div class="contador-texto">CLIENTES QUE VISITARON LA WEB</div>
+	  <a href="https://www.freecounterstat.com" title="free counter"><img src="https://counter9.optistats.ovh/private/freecounterstat.php?c=fdl2leones" border="0" title="free counter" alt="free counter"></a>
+    </div>
+
     <footer>
-        FERRETERÍA DOS LEONES<br>
-        BATALLÓN SAN PEDRO 275, GRAL. RODRÍGUEZ<br>
-        © 2026 Diseñado por Leonel Ayala
+	  FERRETERÍA DOS LEONES<br>
+	  BATALLÓN SAN PEDRO 275, GRAL. RODRÍGUEZ<br>
+	  © 2026 Diseñado por Leonel Ayala
     </footer>
 
     <a href="https://wa.me/541131529826" class="wsp-flotante"><i class="fab fa-whatsapp"></i></a>
 
-</body>
+  </body>
 </html>

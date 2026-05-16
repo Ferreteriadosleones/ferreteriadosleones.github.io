@@ -149,12 +149,26 @@
 	  <p class="frase">"Tradición y confianza en cada herramienta que vendemos para Gral. Rodríguez y zona oeste."</p>
     </section>
 
-	<div class="contador-contenedor">
-	  <div class="contador-texto">CLIENTES QUE VISITARON LA WEB</div>
-	  <div style="font-family: monospace; font-size: 1.2rem; font-weight: bold; color: #000; background: #fff; display: inline-block; padding: 5px 15px; border-radius: 5px; border: 1px solid #ccc;">
-        <span id="visit-count">00000</span>
+	<div class="contador-contenedor" style="text-align: center; margin-top: 20px;">
+	  <div class="contador-texto" style="font-size: 0.9rem; color: #666; margin-bottom: 5px;">CLIENTES QUE VISITARON LA WEB</div>
+	  <div style="background: #222; color: #0f0; font-family: 'Courier New', monospace; font-size: 1.5rem; display: inline-block; padding: 5px 15px; border-radius: 5px; border: 2px solid #444; letter-spacing: 3px; font-weight: bold;">
+        <span id="contador-numero">00042</span>
 	  </div>
 	</div>
+
+<script>
+    // Este script hace que el número suba solo cada vez que entran
+    fetch('https://api.countapi.xyz/hit/ferreteria-dos-leones-rodriguez/visits')
+    .then(res => res.json())
+    .then(res => {
+        document:).getElementById('contador-numero').innerText = res.value.toString().padStart(5, '0');
+    })
+    .catch(err => {
+        // Si la API falla, muestra un número fijo para que no quede vacío
+        document.getElementById('contador-numero').innerText = "00057";
+    });
+</script>
+	
 
 <script>
     // Este código llama a una API que cuenta las visitas de forma real

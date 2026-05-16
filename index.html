@@ -149,12 +149,20 @@
 	  <p class="frase">"Tradición y confianza en cada herramienta que vendemos para Gral. Rodríguez y zona oeste."</p>
     </section>
 
-    <div class="contador-contenedor">
+	<div class="contador-contenedor">
 	  <div class="contador-texto">CLIENTES QUE VISITARON LA WEB</div>
-	  <div align="center">
-		<img src="https://hitwebcounter.com/counter/counter.php?page=1000541914&style=0006&nbdigits=5&type=page&initCount=0" title="Free Counter" Alt="web counter" border="0" style="height: 25px;">
+	  <div style="font-family: monospace; font-size: 1.2rem; font-weight: bold; color: #000; background: #fff; display: inline-block; padding: 5px 15px; border-radius: 5px; border: 1px solid #ccc;">
+        <span id="visit-count">00000</span>
 	  </div>
-    </div>
+	</div>
+
+<script>
+    // Este código llama a una API que cuenta las visitas de forma real
+    function cb(response) {
+        document.getElementById('visit-count').innerText = response.value.toString().padStart(5, '0');
+    }
+</script>
+	<script async src="https://api.countapi.xyz/hit/ferreteria-dos-leones-rodriguez/visits?callback=cb"></script>
 	
 
     <footer>
